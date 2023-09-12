@@ -8,6 +8,8 @@ public class FireGun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     // the position of the bullet when it is fired
     [SerializeField] private Transform bulletSpawn;
+     //damege of the bullet
+    [SerializeField,Range(0,100)] private int damege=0;
     // the force of the bullet
     [SerializeField] private float bulletForce=50f;
     // the amount of time between shots
@@ -25,7 +27,8 @@ public class FireGun : MonoBehaviour
             // create a bullet
             GameObject bullet=Instantiate(bulletPrefab,bulletSpawn.position,bulletSpawn.rotation);
             // add a force to the bullet
-            bullet.GetComponent<Bullet>().velocity=bulletForce;      
+            bullet.GetComponent<Bullet>().velocity=bulletForce;  
+            bullet.GetComponent<Bullet>().SetDamege(damege);    
         }
     }
 }

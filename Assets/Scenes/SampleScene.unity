@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3292,6 +3292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5400651107850808618, guid: fcd3fe127c83df84bb95bd3205007a8c, type: 3}
   bulletSpawn: {fileID: 207398681}
+  damege: 9
   bulletForce: 15
   timeBetweenShots: 0.03
 --- !u!1 &997289136
@@ -4388,6 +4389,20 @@ CapsuleCollider:
   m_Height: 2.774296
   m_Direction: 1
   m_Center: {x: 0, y: 1.4268862, z: 0}
+--- !u!114 &1414678355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414678347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6da192f684f5d4e9d1ca7980f2bc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  isInvulnerable: 0
 --- !u!1001 &1453588323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9578,6 +9593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5400651107850808618, guid: 61ca97f1cd474514d8e2a3376463d407, type: 3}
   bulletSpawn: {fileID: 31017552}
+  damege: 50
   bulletForce: 75
   timeBetweenShots: 1
 --- !u!54 &7742031900820866367

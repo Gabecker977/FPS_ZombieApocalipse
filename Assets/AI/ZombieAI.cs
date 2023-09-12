@@ -21,7 +21,11 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private bool canAtack=true;
     private Rigidbody rb;
     private Animator animator;
+    private Health health;
     private void Start() {
+        health=GetComponent<Health>();
+        health.OnDie+=()=>Destroy(gameObject);
+        health.OnTakeDamege+=()=>Debug.Log("Damege");
         rb=GetComponent<Rigidbody>();
         animator=GetComponent<Animator>();
         if(target==null){
